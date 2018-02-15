@@ -6,17 +6,17 @@ body {
   font-style: initial;
   font-weight: 300;
 }
-
+/*??*/
 i{
 	display: inline-block;
 	width: 12px;
 	height: 13px;
 }
 i.three-bars {
-	background: url('http://localhost:3000/octicons/svg/three-bars.svg');
+	background: url('/octicons/svg/three-bars.svg');
 }
 i.x {
-	background: url('http://localhost:3000/octicons/svg/x.svg');
+	background: url('/octicons/svg/x.svg');
 }
 body > #root > div.container > * {
 	margin-bottom: 10px;
