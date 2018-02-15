@@ -133,16 +133,26 @@ class FormExample extends React.Component {
     var formData = new FormData(document.querySelector('.example'));
     var fTable  = document.querySelector('.FormList.table');
     
+    console.log()
     var el = document.createElement('tr');
     this.setState({ countList: this.state.countList + 1 });
 
     var td = document.createElement('td');
       td.textContent = "##";
       el.appendChild(td);
-
+    var text;
     for( var p of formData) {
+      if(p[0] == 'password'){ 
+        if(p[1].length > 1){
+          text = '***';
+        } else {
+          text = '--\\--';
+        } 
+      } else {
+        text = p[1];
+      }
       var td = document.createElement('td');
-      td.textContent = p[1];
+      td.textContent = text;
       el.appendChild(td);
     }
     fTable.children[1].appendChild(el);
